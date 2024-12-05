@@ -38,7 +38,7 @@ a {
     width: 100vw;
 }
 
-.container>header {
+.container header {
     height: var(--HEADER-HEIGHT);
     padding: 0;
     width: 100vw;
@@ -53,13 +53,13 @@ a {
     background-size: 50px;
 }
 
-.container>header>img {
+.container header img {
     max-width: var(--ASIDE-WIDTH);
     max-height: var(--HEADER-HEIGHT);
     margin-left: 8px;
 }
 
-.container>main {
+.container main {
     grid-area: mainArea;
     max-height: calc(100vh - var(--HEADER-HEIGHT) - var(--FOOTER-HEIGHT));
     overflow-y: auto;
@@ -72,7 +72,7 @@ a {
     align-items: center;
 }
 
-.container>footer {
+.container footer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -82,13 +82,13 @@ a {
     background-color: var(--PRIMARY-CONTAINER-COLOR);
 }
 
-.container>footer>p {
+.container footer p {
     text-align: center;
     color: var(--PRIMARY-TEXT-COLOR);
     margin-left: 8px;
 }
 
-.container>aside {
+.container aside {
     max-width: var(--ASIDE-WIDTH);
     padding: 8px;
     grid-area: asideArea;
@@ -129,6 +129,11 @@ a {
     padding-bottom: 10px;
 }
 
+.post-header h1,
+.post-header p {
+    margin: 10px 0px 10px 0px;
+}
+
 .post-title {
     font-size: 1.8rem;
     color: var(--TEXT-COLOR);
@@ -145,7 +150,9 @@ a {
     word-wrap: break-word;
 }
 
-.blog-post-preview .post-title:hover {
+.blog-post-preview .post-title:hover,
+.post-keep-reading:hover,
+.post-title-aside:hover {
     text-decoration: underline;
 }
 
@@ -159,13 +166,13 @@ a {
 }
 
 .post-image {
-    margin: 20px 0;
+    margin: 20px 0px 0px 0px;
     text-align: center;
 }
 
 .post-image img {
-    max-width: 500px;
-    max-height: 400px;
+    max-width: 80%;
+    max-height: 300px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -176,8 +183,21 @@ a {
     margin-top: 8px;
 }
 
-.post-title-aside {
+.post-title-aside,
+.post-title-aside h5 {
     font-size: .8rem;
+    color: var(--TEXT-COLOR);
+    white-space: normal;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+.post-keep-reading {
+    text-align: right;
+    margin: 0;
+}
+
+.post-keep-reading a {
     color: var(--TEXT-COLOR);
     text-decoration: none;
     white-space: normal;
