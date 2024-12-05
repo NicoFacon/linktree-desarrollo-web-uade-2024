@@ -45,6 +45,12 @@ a {
     grid-area: headerArea;
     background-color: var(--PRIMARY-CONTAINER-COLOR);
     align-content: center;
+
+    background-image: url('./images/motor.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    background-size: 50px;
 }
 
 .container>header>img {
@@ -59,12 +65,17 @@ a {
     overflow-y: auto;
     background-color: var(--SECONDARY-CONTAINER-COLOR);
     border-right: 1px solid var(--SECONDARY-COLOR);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .container>footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0;
     width: 100vw;
     height: var(--FOOTER-HEIGHT);
@@ -74,6 +85,7 @@ a {
 .container>footer>p {
     text-align: center;
     color: var(--PRIMARY-TEXT-COLOR);
+    margin-left: 8px;
 }
 
 .container>aside {
